@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Tween</title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="gbTween.js"></script>
+
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background: #777;
+		}
+
+		#box {
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 100px;
+			background: #f00;
+			position: absolute;
+			opacity: 1;
+		}
+	</style>
+
+</head>
+<body>
+<div id="box"></div>
+</body>
+
+<script>
+	$(function () {
+
+		gbTween.to($('#box'), 2, {
+			width: '150px',
+			left: '100px',
+			opacity: '.5',
+			'transform': "translate3d(100px,0px,0) rotateZ(100deg) scale(2)",
+			ease: 'ease-in-out',
+			delay: 4,
+			onComplete: function () {
+
+			}
+		}, true);
+
+		gbTween.to($('#box'), 4, {
+			top: '100px',
+			opacity: .1,
+			'transform': "translate3d(100px,0,0) rotateZ(360deg)",
+			delay: 2,
+			onComplete: function () {
+
+			}
+		});
+	})
+
+</script>
+</html>
