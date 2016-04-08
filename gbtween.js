@@ -1,7 +1,7 @@
 /**
  * Created by gitbong on 4/7/16.
  */
-var gbTween = (function () {
+var gbtween = (function () {
 
 	var tweenId = 0;
 	var eventId = 0;
