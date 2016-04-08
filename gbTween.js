@@ -23,7 +23,6 @@ var gbTween = (function () {
 			_initTranslate($dom, duration, params, transitionVal);
 		}
 
-
 		var eId = eventId;
 		eventId++;
 		$dom.on('webkitTransitionEnd transitionend', _onComplete);
